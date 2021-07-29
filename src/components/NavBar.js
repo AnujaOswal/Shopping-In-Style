@@ -40,7 +40,7 @@ export default function NavBar({ setShow, item }) {
               >
                 <FaShoppingCart />
                 <span className="cartIcon">Cart</span>
-                <Badge pill variant="dark">
+                <Badge pill variant="dark" style={{backgroundColor:"black"}}>
                 {item.length}
                 </Badge>
               </Button>

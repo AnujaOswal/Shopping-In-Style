@@ -1,6 +1,8 @@
 // import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
+//for displaying star icons for ratings
+
 export function Rating({ ratings }) {
   // const [rating, setRating] = useState(3);
   return (

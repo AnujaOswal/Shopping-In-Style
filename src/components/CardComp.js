@@ -24,7 +24,7 @@ import {
     };
   
     return (
-      // Main Card components for each object from the CardData db
+      // Main Card components for each object from the CardData-db
       <div className="main">
         <Container>
           <Row>
@@ -38,7 +38,7 @@ import {
                     <Card className="cards">
                       <Badge
                         className="saleBdg"
-                        variant="dark"
+                        variant="outline-dark"
                         style={{
                           padding: "0.35em 0.65em",
                           display: sale === true ? "block" : "none",
@@ -60,7 +60,7 @@ import {
                           {/* Span tag for striked of prices */}
                           <span className="striked">{striked}</span>
   
-                          {/* Ternary operator for different display requirements(If title is Fancy Product then display the price as it is or else add $ and .00 at the front and back of the price) */}
+                          {/*To display prices from CardData-DB (If title is Fancy product and if no values are there from  db then will display as it $ and .00)*/}
                           {title === "Fancy Product"
                             ? price
                             : "$" + price + ".00"}

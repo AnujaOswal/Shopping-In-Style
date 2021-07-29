@@ -4,7 +4,7 @@ import { Card, Button, Row, Col } from "react-bootstrap";
 export function CartPanel({ show, setShow, item, setItem }) {
   const [total, setTotal] = useState(0);
 
-  // Removing an item from the cart and refreshing it at the same time.
+  // Removing an item from the cart
   const removeItem = (index) => {
     item.splice(index, 1);
 
@@ -12,6 +12,7 @@ export function CartPanel({ show, setShow, item, setItem }) {
       return elem;
     });
 
+    //If none of items are selected to cart order it will show 0 and display none and if item is added to cart then it will updateitem and display the no. of items selected
     if (item.length === 0) {
       setShow("none");
     } else {
@@ -51,6 +52,7 @@ export function CartPanel({ show, setShow, item, setItem }) {
           </div>
           <hr style={{ width: "100%" }} />
 
+           {/*Displaying Cart Details */} 
           <div style={{ width: "100%" }}>
             {item.map((cartItems, index) => {
               return (
